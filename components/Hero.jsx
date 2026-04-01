@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
    return (
-      <section className={styles.hero}>
+      <header className={styles.hero}>
          <div className={styles.particlesLayer}>
             <ParticlesBackground />
          </div>
@@ -27,6 +27,6 @@ export default function Hero() {
                className={styles.image}
             />
          </div>
-      </section>
+      </header>
    );
 }
