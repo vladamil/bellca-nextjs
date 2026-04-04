@@ -2,21 +2,21 @@ import Nails from './Nails';
 
 const nails = [
    '/nails/nokti01.jpg',
-   '/nails/nokti02.jpg',
-   '/nails/nokti03.jpg',
-   '/nails/nokti04.jpg',
-   '/nails/nokti05.jpg',
-   '/nails/nokti06.jpg',
-   '/nails/nokti07.jpg',
-   '/nails/nokti08.jpg',
-   '/nails/nokti09.jpg',
-   '/nails/nokti10.jpg',
-   '/nails/nokti11.jpg',
-   '/nails/nokti12.jpg',
-   '/nails/nokti13.jpg',
-   '/nails/nokti14.jpg',
-   '/nails/nokti15.jpg',
-   '/nails/nokti16.jpg',
+   '/nails/nokti02.jpeg',
+   '/nails/nokti03.jpeg',
+   '/nails/nokti04.jpeg',
+   '/nails/nokti05.jpeg',
+   '/nails/nokti06.jpeg',
+   '/nails/nokti07.jpeg',
+   '/nails/nokti08.jpeg',
+   '/nails/nokti09.jpeg',
+   '/nails/nokti10.jpeg',
+   '/nails/nokti11.jpeg',
+   '/nails/nokti12.jpeg',
+   '/nails/nokti13.jpeg',
+   '/nails/nokti14.jpeg',
+   '/nails/nokti15.jpeg',
+   '/nails/nokti16.jpeg',
 ];
 
 const lashes = [
@@ -31,11 +31,11 @@ const lashes = [
    '/lashes/trepavice09.jpg',
    '/lashes/trepavice10.jpg',
    '/lashes/trepavice11.jpg',
-   '/lashes/trepavice12.jpg',
+   '/lashes/trepavice12.jpeg',
    '/lashes/trepavice13.jpg',
    '/lashes/trepavice14.jpg',
    '/lashes/trepavice15.jpg',
-   '/lashes/trepavice16.jpg',
+   '/lashes/trepavice16.jpeg',
 ];
 
 const gallery = [...nails, ...lashes];
