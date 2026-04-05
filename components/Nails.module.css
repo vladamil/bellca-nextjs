@@ -31,6 +31,24 @@
    flex: 1;
 }
 
+.services h3 {
+   font-size: 24px;
+   margin-bottom: 36px;
+   border-bottom: 4px solid #9b111e;
+   text-transform: uppercase;
+}
+
+.services p {
+   margin-bottom: 12px;
+   font-size: 18px;
+}
+
+.services .icon {
+   color: #9b111e;
+   margin-right: 4px;
+   transform: translateY(2px);
+}
+
 /* BENTO GRID LOGIC */
 .bentoGrid {
    flex: 2;
@@ -49,8 +67,6 @@
 }
 
 .item img {
-   width: 100%;
-   height: 100%;
    object-fit: cover;
    transition: transform 0.5s ease;
 }
