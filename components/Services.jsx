@@ -1,4 +1,5 @@
 import Nails from './Nails';
+import Lashes from './Lashes';
 
 const nails = [
    '/nails/nokti01.jpg',
@@ -41,5 +42,10 @@ const lashes = [
 const gallery = [...nails, ...lashes];
 
 export default function Services() {
-   return <Nails nails={nails} />;
+   return (
+      <>
+         <Nails nails={nails} />
+         <Lashes lashes={lashes} />
+      </>
+   );
 }

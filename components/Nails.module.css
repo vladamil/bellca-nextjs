@@ -27,6 +27,10 @@
    border-radius: 20px;
 }
 
+.reverse {
+   flex-direction: row-reverse;
+}
+
 .services {
    flex: 1;
 }
@@ -36,6 +40,10 @@
    margin-bottom: 36px;
    border-bottom: 4px solid #9b111e;
    text-transform: uppercase;
+}
+
+h3.right {
+   text-align: right;
 }
 
 .services p {
