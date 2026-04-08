@@ -1,0 +1,34 @@
+.footer {
+   background-color: #9b111e;
+   color: silver;
+   border-top: 2px solid silver;
+}
+
+.content {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.address {
+   font-size: 14px;
+}
+
+.small {
+   font-size: 14px;
+   text-align: center;
+   color: rgb(124, 122, 122);
+}
+
+.socials {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   font-size: 32px;
+}
+
+.socials a {
+   text-decoration: none;
+   margin: 20px;
+   color: inherit;
+}
