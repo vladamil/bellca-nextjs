@@ -4,27 +4,25 @@
    justify-content: center;
 }
 
+.contentBg {
+   position: relative;
+   border-radius: 20px;
+   z-index: 0;
+   overflow: hidden;
+}
+
+.bgImage {
+   object-fit: cover;
+   object-position: 50% 0;
+   opacity: 0.15;
+}
+
 .content {
    display: flex;
    gap: 40px;
    position: relative;
    padding: 60px 40px;
-}
-
-.content::before {
-   content: ' ';
-   display: block;
-   position: absolute;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   opacity: 0.15;
-   background-image: url('/about/about5.jpg');
-   background-repeat: no-repeat;
-   background-position: 50% 0;
-   background-size: cover;
-   border-radius: 20px;
+   z-index: 1;
 }
 
 .reverse {
