@@ -2,7 +2,6 @@
    display: grid;
    grid-template-columns: 1fr;
    position: relative;
-   width: 95%;
    max-width: 800px;
    margin: auto;
    background-color: #9b111f94;
@@ -19,7 +18,7 @@
 }
 
 .testimonialItem {
-   /* This is the magic part: they all sit in the same spot */
+   /*They all sit in the same spot */
    grid-column: 1 / 1;
    grid-row: 1 / 1;
 
@@ -46,7 +45,7 @@
 
 .inactive {
    opacity: 0;
-   transform: translateY(10px); /* Subtle slide down when disappearing */
+   transform: translateY(10px);
 }
 
 .text {
@@ -57,7 +56,53 @@
    position: absolute;
    bottom: 20px;
    right: 20px;
-   display: flex;
-   align-items: center;
-   gap: 8px;
+}
+
+.clientName {
+   display: inline-block; /* Required for transforms to work */
+   font-family: var(--font-italianno);
+   font-size: 2rem;
+   letter-spacing: 1.5;
+
+   animation: signatureEntry 1s forwards;
+}
+
+@keyframes signatureEntry {
+   0% {
+      opacity: 0;
+      transform: translateX(15px);
+      filter: blur(10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+   }
+}
+
+.progressContainer {
+   position: absolute;
+   bottom: 1px;
+   left: 5%;
+   width: 90%;
+   height: 2px;
+   overflow: hidden;
+   z-index: 10;
+   border-radius: 20px;
+}
+
+.progressBar {
+   height: 100%;
+   background-color: silver;
+   width: 0%;
+   animation: fillProgress 7s linear forwards;
+}
+
+@keyframes fillProgress {
+   from {
+      width: 0%;
+   }
+   to {
+      width: 100%;
+   }
 }

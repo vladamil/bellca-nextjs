@@ -1,7 +1,7 @@
 'use client';
 
-import { FaQuoteRight } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import { FaQuoteRight, FaPenNib } from 'react-icons/fa';
 import styles from './Testimonials.module.css';
 
 const testimonials = [
@@ -49,6 +49,7 @@ export default function Testimonials() {
       <section>
          <div className={styles.testimonialBox}>
             <FaQuoteRight className={styles.quote} />
+
             {testimonials.map((item, i) => (
                <div
                   key={i}
@@ -58,10 +59,15 @@ export default function Testimonials() {
                </div>
             ))}
             <div className={styles.signature}>
-               {/* <img src="/pen-icon.svg" alt="pen" width="20" /> */}
-               <span className={styles.clientName}>
-                  {testimonials[index].name}
+               <span key={index} className={styles.clientName}>
+                  <FaPenNib size={18} /> {testimonials[index].name}
                </span>
+            </div>
+            <div className={styles.progressContainer}>
+               <div
+                  key={index} // Magic: restarts the animation on every switch
+                  className={styles.progressBar}
+               />
             </div>
          </div>
       </section>
