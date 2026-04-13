@@ -4,7 +4,7 @@ import styles from './Nails.module.css';
 
 export default function Lashes({ lashes }) {
    return (
-      <section id="nokti" className={styles.nails}>
+      <section id="trepavice" className={styles.nails}>
          <div className="container">
             {/* BACKGROUND WRAPPER DIV*/}
             <div className={styles.contentBg}>

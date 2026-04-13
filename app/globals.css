@@ -4,6 +4,11 @@
    margin: 0;
 }
 
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 80px; /* Set this to the height of your Navbar */
+}
+
 section {
    background-color: #07070d;
    color: white;

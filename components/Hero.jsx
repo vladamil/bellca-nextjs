@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
    return (
-      <header className={styles.hero}>
+      <header className={styles.hero} id="home">
          <div className={styles.particlesLayer}>
             <ParticlesBackground />
          </div>

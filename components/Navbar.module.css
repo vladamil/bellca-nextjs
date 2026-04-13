@@ -1,0 +1,31 @@
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: rgb(172, 9, 9);
+   z-index: 1000;
+   border-bottom: 1px solid #eee;
+   height: 80px;
+}
+
+.navList {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+   padding: 0 1rem;
+   margin: 0;
+   height: 100%;
+}
+
+.navItem {
+   text-decoration: none;
+   background: none;
+   border: none;
+   cursor: pointer;
+   padding: 0.5rem 1rem;
+   position: relative;
+   font-size: 1rem;
+   color: #eee;
+}
