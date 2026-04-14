@@ -13,7 +13,7 @@
 .about .line {
    width: 70%;
    height: 4px;
-   background-color: #9b111e;
+   background-color: var(--main-color);
    margin: auto;
 }
 
@@ -29,9 +29,9 @@
    max-height: 500px;
    max-width: 90%;
    border-radius: 50%;
-   border: 5px solid #9b111e;
+   border: 5px solid var(--main-color);
    margin: 40px auto 0;
-   background-color: silver;
+   background-color: var(--second-color);
    overflow: hidden;
 }
 

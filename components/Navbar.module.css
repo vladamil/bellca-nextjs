@@ -3,10 +3,14 @@
    top: 0;
    left: 0;
    width: 100%;
-   background: rgb(172, 9, 9);
+   background: var(--main-color);
    z-index: 1000;
-   border-bottom: 1px solid #eee;
-   height: 80px;
+   border-bottom: 1px solid var(--second-color);
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 3rem;
 }
 
 .navList {
@@ -15,8 +19,6 @@
    align-items: center;
    list-style: none;
    padding: 0 1rem;
-   margin: 0;
-   height: 100%;
 }
 
 .navItem {
@@ -26,6 +28,6 @@
    cursor: pointer;
    padding: 0.5rem 1rem;
    position: relative;
-   font-size: 1rem;
-   color: #eee;
+   font-size: 1.1rem;
+   color: white;
 }

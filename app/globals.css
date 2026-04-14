@@ -1,3 +1,9 @@
+:root {
+   --main-color: #9b111e;
+   --second-color: silver;
+   --bg-color: #07070d;
+}
+
 * {
    box-sizing: border-box;
    padding: 0;
@@ -6,11 +12,10 @@
 
 html {
    scroll-behavior: smooth;
-   scroll-padding-top: 80px; /* Set this to the height of your Navbar */
 }
 
 section {
-   background-color: #07070d;
+   background-color: var(--bg-color);
    color: white;
    min-height: 100vh;
 }

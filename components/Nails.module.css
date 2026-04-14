@@ -36,7 +36,7 @@
 .services h3 {
    font-size: 24px;
    margin-bottom: 36px;
-   border-bottom: 4px solid #9b111e;
+   border-bottom: 4px solid var(--main-color);
    text-transform: uppercase;
 }
 
@@ -50,7 +50,7 @@ h3.right {
 }
 
 .services .icon {
-   color: #9b111e;
+   color: var(--main-color);
    margin-right: 4px;
    transform: translateY(2px);
 }
@@ -68,7 +68,7 @@ h3.right {
 .item {
    position: relative;
    overflow: hidden;
-   border: 2px solid silver;
+   border: 2px solid var(--second-color);
    border-radius: 10px;
 }
 
