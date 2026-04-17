@@ -1,3 +1,11 @@
+.trigger {
+   position: absolute;
+   top: 0;
+   height: 50px;
+   width: 100%;
+   pointer-events: none;
+}
+
 .navbar {
    position: fixed;
    top: 0;
@@ -5,12 +13,30 @@
    width: 100%;
    background: var(--main-color);
    z-index: 1000;
-   border-bottom: 1px solid var(--second-color);
-   height: 70px;
+   border-bottom: 2px solid var(--second-color);
+   height: 80px;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 0 3rem;
+   padding: 0 2rem;
+   transition: all 0.3s linear;
+}
+
+.navScroll {
+   height: 50px;
+   /* Glass Effect */
+   background: rgba(155, 17, 30, 0.8);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px); /* Safari support */
+
+   border-bottom: 1px solid var(--second-color);
+}
+
+.title {
+   font-size: 30px;
+   color: var(--second-color);
+   font-family: var(--font-italianno);
+   letter-spacing: 1.1;
 }
 
 .navList {
@@ -18,7 +44,6 @@
    justify-content: center;
    align-items: center;
    list-style: none;
-   padding: 0 1rem;
 }
 
 .navItem {
@@ -28,6 +53,14 @@
    cursor: pointer;
    padding: 0.5rem 1rem;
    position: relative;
-   font-size: 1.1rem;
+   font-size: 1rem;
    color: white;
+   font-family: inherit;
+}
+
+.socialIcon {
+   font-size: 20px;
+   margin-left: 16px;
+   color: var(--second-color);
+   cursor: pointer;
 }

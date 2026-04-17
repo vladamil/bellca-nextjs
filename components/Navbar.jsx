@@ -1,8 +1,13 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
+   const [scrollNav, setScrollNav] = useState(false);
+   const triggerRef = useRef(null);
+
    const scrollToSection = (id) => {
       const element = document.getElementById(id);
       if (element) {
@@ -11,123 +16,89 @@ export default function Navbar() {
       }
    };
 
+   useEffect(() => {
+      const observer = new IntersectionObserver(
+         ([entry]) => {
+            // If the trigger is NOT intersecting (scrolled past), shrink the nav
+            setScrollNav(!entry.isIntersecting);
+         },
+         { threshold: 0 }, // Fire as soon as 1 pixel leaves/enters
+      );
+
+      if (triggerRef.current) {
+         observer.observe(triggerRef.current);
+      }
+
+      return () => observer.disconnect();
+   }, []);
+
    return (
-      <nav className={styles.navbar}>
-         <div>{/* Empty div for flex */}</div>
-         <ul className={styles.navList}>
-            <li>
-               <button
-                  className={styles.navItem}
-                  onClick={() => scrollToSection('home')}
+      <>
+         {/* SEntinel div for triggering scroll style for navbar */}
+         <div ref={triggerRef} className={styles.trigger} />
+
+         <nav className={`${scrollNav && styles.navScroll} ${styles.navbar}`}>
+            <div className={styles.title}>Bellca Branchie Studio</div>
+            <ul className={styles.navList}>
+               <li>
+                  <button
+                     className={styles.navItem}
+                     onClick={() => scrollToSection('home')}
+                  >
+                     Home
+                  </button>
+               </li>
+               <li>
+                  <button
+                     className={styles.navItem}
+                     onClick={() => scrollToSection('o-nama')}
+                  >
+                     O nama
+                  </button>
+               </li>
+               <li>
+                  <button
+                     className={styles.navItem}
+                     onClick={() => scrollToSection('nokti')}
+                  >
+                     Noktići
+                  </button>
+               </li>
+               <li>
+                  <button
+                     className={styles.navItem}
+                     onClick={() => scrollToSection('trepavice')}
+                  >
+                     Trepavice
+                  </button>
+               </li>
+               <li>
+                  <button
+                     className={styles.navItem}
+                     onClick={() => scrollToSection('kontakt')}
+                  >
+                     Kontakt
+                  </button>
+               </li>
+            </ul>
+            <div>
+               <a
+                  href="https://www.facebook.com/bellca.branchie/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                >
-                  Home
-               </button>
-            </li>
-            <li>
-               <button
-                  className={styles.navItem}
-                  onClick={() => scrollToSection('o-nama')}
+                  <FaFacebook className={styles.socialIcon} />
+               </a>
+
+               <a
+                  href="https://www.instagram.com/bellcabeauty"
+                  target="_blank"
+                  rel="noopener noreferrer"
                >
-                  O nama
-               </button>
-            </li>
-            <li>
-               <button
-                  className={styles.navItem}
-                  onClick={() => scrollToSection('nokti')}
-               >
-                  Noktići
-               </button>
-            </li>
-            <li>
-               <button
-                  className={styles.navItem}
-                  onClick={() => scrollToSection('trepavice')}
-               >
-                  Trepavice
-               </button>
-            </li>
-            <li>
-               <button
-                  className={styles.navItem}
-                  onClick={() => scrollToSection('kontakt')}
-               >
-                  Kontakt
-               </button>
-            </li>
-         </ul>
-         <div>SOCIALS</div>
-      </nav>
+                  <FaInstagram className={styles.socialIcon} />
+               </a>
+            </div>
+         </nav>
+      </>
    );
 }
-
-// 'use client';
-
-// import { useState, useEffect, useRef } from 'react';
-// import styles from './Navbar.module.css';
-
-// const sections = ['home', 'about', 'services', 'contact'];
-
-// export default function Navbar() {
-//   const [activeSection, setActiveSection] = useState('home');
-//   const isScrollingAuto = useRef(false); // The "Flag" to prevent flickering
-
-//   const scrollToSection = (id) => {
-//     const element = document.getElementById(id);
-//     if (element) {
-//       isScrollingAuto.current = true; // Block the observer
-//       setActiveSection(id); // Set active immediately for instant feedback
-
-//       element.scrollIntoView({ behavior: 'smooth' });
-
-//       // Re-enable observer after the smooth scroll finishes (~800ms)
-//       setTimeout(() => {
-//         isScrollingAuto.current = false;
-//       }, 800);
-//     }
-//   };
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         if (isScrollingAuto.current) return; // Skip if we are mid-click-scroll
-
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             setActiveSection(entry.target.id);
-//           }
-//         });
-//       },
-//       {
-//         // This "hit zone" ensures the link changes when the section
-//         // reaches the top 30% of the screen.
-//         rootMargin: '-30% 0px -60% 0px',
-//         threshold: 0
-//       }
-//     );
-
-//     sections.forEach((id) => {
-//       const el = document.getElementById(id);
-//       if (el) observer.observe(el);
-//     });
-
-//     return () => observer.disconnect();
-//   }, []);
-
-//   return (
-//     <nav className={styles.navbar}>
-//       <ul className={styles.navList}>
-//         {sections.map((section) => (
-//           <li key={section}>
-//             <button
-//               onClick={() => scrollToSection(section)}
-//               className={`${styles.navItem} ${activeSection === section ? styles.active : ''}`}
-//             >
-//               {section.charAt(0).toUpperCase() + section.slice(1)}
-//             </button>
-//           </li>
-//         ))}
-//       </ul>
-//     </nav>
-//   );
-// }
