@@ -46,30 +46,28 @@ export default function Testimonials() {
    }, []);
 
    return (
-      <section>
-         <div className={styles.testimonialBox}>
-            <FaQuoteRight className={styles.quote} />
+      <div className={styles.testimonialBox}>
+         <FaQuoteRight className={styles.quote} />
 
-            {testimonials.map((item, i) => (
-               <div
-                  key={i}
-                  className={`${styles.testimonialItem} ${i === index ? styles.active : styles.inactive}`}
-               >
-                  <p className={styles.text}>{item.text}</p>
-               </div>
-            ))}
-            <div className={styles.signature}>
-               <span key={index} className={styles.clientName}>
-                  <FaPenNib size={18} /> {testimonials[index].name}
-               </span>
+         {testimonials.map((item, i) => (
+            <div
+               key={i}
+               className={`${styles.testimonialItem} ${i === index ? styles.active : styles.inactive}`}
+            >
+               <p className={styles.text}>{item.text}</p>
             </div>
-            <div className={styles.progressContainer}>
-               <div
-                  key={index} // Magic: restarts the animation on every switch
-                  className={styles.progressBar}
-               />
-            </div>
+         ))}
+         <div className={styles.signature}>
+            <span key={index} className={styles.clientName}>
+               <FaPenNib size={18} /> {testimonials[index].name}
+            </span>
          </div>
-      </section>
+         <div className={styles.progressContainer}>
+            <div
+               key={index} // Magic: restarts the animation on every switch
+               className={styles.progressBar}
+            />
+         </div>
+      </div>
    );
 }
