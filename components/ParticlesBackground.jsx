@@ -39,10 +39,10 @@ export default function ParticlesBackground() {
             fullScreen: { enable: false },
             detectRetina: true,
             particles: {
-               number: { value: isMobile ? 40 : 120 },
+               number: { value: isMobile ? 40 : 150 },
                color: { value: ['#ffffff', '#9b111e'] },
                size: {
-                  value: isMobile ? { min: 1, max: 3 } : { min: 1, max: 4 },
+                  value: isMobile ? { min: 1, max: 3 } : { min: 1, max: 5 },
                },
                opacity: { value: 0.5 },
                move: {
