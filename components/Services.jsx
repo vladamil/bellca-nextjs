@@ -1,5 +1,7 @@
+import { LightboxProvider } from '@/context/LightboxContext';
 import Nails from './Nails';
 import Lashes from './Lashes';
+import LigthboxWrapper from './LightboxWrapper';
 
 const nails = [
    '/nails/nokti01.jpg',
@@ -43,9 +45,10 @@ const gallery = [...nails, ...lashes];
 
 export default function Services() {
    return (
-      <>
+      <LightboxProvider images={gallery}>
          <Nails nails={nails} />
          <Lashes lashes={lashes} />
-      </>
+         <LigthboxWrapper images={gallery} />
+      </LightboxProvider>
    );
 }

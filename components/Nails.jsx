@@ -1,8 +1,12 @@
+'use client';
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
 import styles from './Nails.module.css';
 
+import { useLightbox } from '@/context/LightboxContext';
+
 export default function Nails({ nails }) {
+   const { openLightbox } = useLightbox();
    return (
       <section id="nokti" className={styles.nails}>
          <div className="container">
@@ -66,6 +70,9 @@ export default function Nails({ nails }) {
                            fill
                            sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
                            alt="Nails"
+                           onClick={() => {
+                              openLightbox(nails[0]);
+                           }}
                         />
                      </div>
                      <div className={`${styles.item} ${styles.wide}`}>
