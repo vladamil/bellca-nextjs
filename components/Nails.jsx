@@ -1,12 +1,10 @@
-'use client';
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
+import NailsImages from './NailsImages';
+
 import styles from './Nails.module.css';
 
-import { useLightbox } from '@/context/LightboxContext';
-
 export default function Nails({ nails }) {
-   const { openLightbox } = useLightbox();
    return (
       <section id="nokti" className={styles.nails}>
          <div className="container">
@@ -62,140 +60,7 @@ export default function Nails({ nails }) {
                   </div>
 
                   {/* Images Grid */}
-
-                  <div className={styles.bentoGrid}>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[0]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                           onClick={() => {
-                              openLightbox(nails[0]);
-                           }}
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.wide}`}>
-                        <Image
-                           src={nails[1]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[2]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[3]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.wide}`}>
-                        <Image
-                           src={nails[4]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.full}`}>
-                        <Image
-                           src={nails[5]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[6]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[7]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[8]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.tall}`}>
-                        <Image
-                           src={nails[9]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[10]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[11]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.tall}`}>
-                        <Image
-                           src={nails[12]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[13]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.wide}`}>
-                        <Image
-                           src={nails[14]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={nails[15]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Nails"
-                        />
-                     </div>
-                  </div>
+                  <NailsImages nails={nails} />
                </div>
             </div>
          </div>

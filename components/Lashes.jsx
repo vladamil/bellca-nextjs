@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
+import LashesImages from './LashesImages';
 import styles from './Nails.module.css';
 
 export default function Lashes({ lashes }) {
@@ -41,136 +42,7 @@ export default function Lashes({ lashes }) {
 
                   {/* Images Grid */}
 
-                  <div className={styles.bentoGrid}>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[0]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.wide}`}>
-                        <Image
-                           src={lashes[1]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[2]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[3]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.wide}`}>
-                        <Image
-                           src={lashes[4]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.full}`}>
-                        <Image
-                           src={lashes[5]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[6]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[7]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[8]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.tall}`}>
-                        <Image
-                           src={lashes[9]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[10]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[11]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.tall}`}>
-                        <Image
-                           src={lashes[12]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[13]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={`${styles.item} ${styles.wide}`}>
-                        <Image
-                           src={lashes[14]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                     <div className={styles.item}>
-                        <Image
-                           src={lashes[15]}
-                           fill
-                           sizes="(max-width: 768px) 30vw, (max-width: 1200px) 50vw, 33vw"
-                           alt="Lashes"
-                        />
-                     </div>
-                  </div>
+                  <LashesImages lashes={lashes} />
                </div>
             </div>
          </div>
