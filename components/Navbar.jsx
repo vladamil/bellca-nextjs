@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaBars } from 'react-icons/fa';
+import MobileNavbar from './MobileNavbar';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
    const [scrollNav, setScrollNav] = useState(false);
+   const [openMobileMenu, setOpenMobileMenu] = useState(false);
    const triggerRef = useRef(null);
 
    const scrollToSection = (id) => {
@@ -14,6 +16,10 @@ export default function Navbar() {
          // scrollIntoView provides smooth scrolling without changing the URL
          element.scrollIntoView();
       }
+   };
+
+   const closeMobileMenu = () => {
+      setOpenMobileMenu(false);
    };
 
    useEffect(() => {
@@ -37,7 +43,10 @@ export default function Navbar() {
          {/* SEntinel div for triggering scroll style for navbar */}
          <div ref={triggerRef} className={styles.trigger} />
 
-         <nav className={`${scrollNav && styles.navScroll} ${styles.navbar}`}>
+         <nav
+            className={`${scrollNav && styles.navScroll} ${styles.navbar}`}
+            aria-label="Main Desktop Nav"
+         >
             <div className={styles.title}>Bellca Branchie Studio</div>
             <ul className={styles.navList}>
                <li>
@@ -99,6 +108,19 @@ export default function Navbar() {
                </a>
             </div>
          </nav>
+         {/* MOBILE MENU BUTTON */}
+         <div
+            className={styles.mobileBtn}
+            onClick={() => setOpenMobileMenu(true)}
+         >
+            <FaBars />
+         </div>
+         {/* MOBILE NAVIGATION */}
+         <MobileNavbar
+            open={openMobileMenu}
+            onClose={closeMobileMenu}
+            scrollToSection={scrollToSection}
+         />
       </>
    );
 }

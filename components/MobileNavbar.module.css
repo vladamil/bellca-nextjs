@@ -1,0 +1,68 @@
+.sideMenu {
+   display: none;
+}
+
+@media screen and (max-width: 960px) {
+   .sideMenu {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 85%;
+      max-width: 400px;
+      background-color: var(--main-color);
+      z-index: 9999;
+      border-left: 3px solid var(--second-color);
+      transform: translateX(100%);
+      transition: transform 0.5s ease;
+   }
+
+   .sideMenu.open {
+      transform: translateX(0);
+   }
+
+   .sideClose {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      background: transparent;
+      font-size: 30px;
+      color: silver;
+      border: none;
+      cursor: pointer;
+   }
+
+   .side-links {
+      height: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .side-links ul {
+      list-style: none;
+   }
+   .side-links li {
+      margin-bottom: 20px;
+   }
+
+   .side-links li a {
+      text-decoration: none;
+      font-size: 20px;
+      color: silver;
+      text-transform: uppercase;
+   }
+
+   .side-socials {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 30px;
+   }
+
+   .side-socials a {
+      text-decoration: none;
+      color: silver;
+   }
+}
