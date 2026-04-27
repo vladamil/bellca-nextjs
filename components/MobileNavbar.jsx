@@ -1,4 +1,4 @@
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 import styles from './MobileNavbar.module.css';
 
@@ -8,34 +8,8 @@ export default function MobileNavbar({ open, onClose, scrollToSection }) {
          <button className={styles.sideClose} onClick={onClose}>
             <FaTimes />
          </button>
-         <div className="side-links">
-            {/* <ul>
-               <li>
-                  <a href="#home" className="internal">
-                     Home
-                  </a>
-               </li>
-               <li>
-                  <a href="#about" className="internal">
-                     O nama
-                  </a>
-               </li>
-               <li>
-                  <a href="#nails" className="internal">
-                     Nokti
-                  </a>
-               </li>
-               <li>
-                  <a href="#eyelashes" className="internal">
-                     Trepavice
-                  </a>
-               </li>
-               <li>
-                  <a href="#contact" className="internal">
-                     Kontakt
-                  </a>
-               </li>
-            </ul> */}
+         <div className={styles.sideTitle}>Bellca Branchie Studio</div>
+         <nav className={styles.sideLinks}>
             <ul className={styles.navList}>
                <li>
                   <button
@@ -93,22 +67,19 @@ export default function MobileNavbar({ open, onClose, scrollToSection }) {
                   </button>
                </li>
             </ul>
-         </div>
-         <div className="side-socials">
+         </nav>
+         <div className={styles.sideSocials}>
             <p>
                <a
-                  href="https://www.facebook.com/profile.php?id=61551700088201"
+                  href="https://www.facebook.com/bellca.branchie/"
                   target="_blank"
                >
-                  <i className="fa-brands fa-facebook"></i>
+                  <FaFacebook />
                </a>
             </p>
             <p>
-               <a
-                  href="https://www.instagram.com/bellcabeauty?igsh=MWFza2dqY2gxMmk2ZA%3D%3D"
-                  target="_blank"
-               >
-                  <i className="fa-brands fa-instagram"></i>
+               <a href="https://www.instagram.com/bellcabeauty" target="_blank">
+                  <FaInstagram />
                </a>
             </p>
          </div>
