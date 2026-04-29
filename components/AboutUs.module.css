@@ -5,7 +5,7 @@
    justify-content: center;
 }
 
-.about h2 {
+.about h1 {
    font-size: 50px;
    text-align: center;
 }
@@ -46,4 +46,20 @@
 .image.active {
    opacity: 1;
    transform: scale(1.05);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 960px) {
+   .about h1 {
+      font-size: 30px;
+   }
+
+   .about p {
+      font-size: 16px;
+   }
+
+   .imgContainer {
+      max-width: 80%;
+   }
 }

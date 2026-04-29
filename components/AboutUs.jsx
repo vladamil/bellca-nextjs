@@ -5,7 +5,7 @@ export default function AboutUs() {
    return (
       <section id="o-nama" className={styles.about}>
          <div className="container">
-            <h2>Bellca Beauty Studio</h2>
+            <h1>Bellca Beauty Studio</h1>
             <div className={styles.line}></div>
             <p>
                Moj koncept rada je da Vam pružim vrhunsku uslugu, nebitan mi je
