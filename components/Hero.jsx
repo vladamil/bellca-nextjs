@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import ParticlesBackground from './ParticlesBackground';
+import CtaButton from './CtaButton';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -13,7 +14,7 @@ export default function Hero() {
             <p>
                Vaš život ne mora biti savršen, ali nokti i trepavice mogu biti
             </p>
-            <button className={styles.cta}>Zakažite termin</button>
+            <CtaButton />
          </div>
 
          <div className={styles.imageWrapper}>
