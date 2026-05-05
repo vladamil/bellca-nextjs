@@ -27,7 +27,7 @@
    border-radius: 20px;
 }
 
-.box div {
+.box > div {
    margin-bottom: 10px;
 }
 
@@ -49,4 +49,14 @@
    max-width: 100%;
    overflow: hidden;
    border-radius: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 960px) {
+   .location {
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px 10px;
+   }
 }
