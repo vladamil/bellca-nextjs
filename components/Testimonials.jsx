@@ -41,8 +41,9 @@ export default function Testimonials() {
    useEffect(() => {
       const timer = setInterval(() => {
          setIndex((prev) => (prev + 1) % testimonials.length);
-         return () => clearInterval(timer);
       }, 7000);
+
+      return () => clearInterval(timer);
    }, []);
 
    return (
